@@ -53,7 +53,10 @@ jobs:
           sudo rm -rf /Applications/Google\ Chrome.app
 
       - name: Run bootstrap shell script
-        run: bootstrap.sh
+        run: |
+          pwd -P
+          ls -lah
+          ./bootstrap.sh
 
       - name: Set up the Ansible test environment
         run: |
