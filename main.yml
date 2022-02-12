@@ -1,0 +1,8 @@
+---
+- name: Bootstrap macOS
+  hosts: all
+
+  tasks:
+    - name: Say hello
+      debug:
+        msg: "Hello {{ lookup('env','USER') }} on {{ lookup('env','HOST') }}."
