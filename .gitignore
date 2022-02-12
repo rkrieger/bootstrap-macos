@@ -1,4 +1,5 @@
 .DS_Store
 ._*
 roles*
+brew_install.sh
 config.yml
