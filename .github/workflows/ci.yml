@@ -31,6 +31,7 @@ jobs:
           yamllint .
           ansible-lint
 
+
   integration:
     name: Integration
     runs-on: ${{ matrix.os }}
@@ -51,14 +52,14 @@ jobs:
           sudo rm -rf /Applications/Firefox.app
           sudo rm -rf /Applications/Google\ Chrome.app
 
-      - name: Set up the test environment
+      - name: Run bootstrap shell script
+        run: bootstrap.sh
+
+      - name: Set up the Ansible test environment
         run: |
           cp tests/ansible.cfg ./
           cp tests/inventory ./
           ansible-galaxy install -r requirements.yml
-
-      - name: Run bootstrap shell script
-        run: bootstrap.sh
 
       - name: Test playbook syntax
         run: ansible-playbook main.yml --syntax-check
