@@ -6,7 +6,8 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 5 * * 4"
+    # Sunday 04:30 UTC
+    - cron: "30 4 * * 0"
 
 jobs:
   integration:
