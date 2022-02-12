@@ -30,12 +30,12 @@ jobs:
           sudo rm -rf /Applications/Google\ Chrome.app
 
       - name: Run bootstrap shell script
-        run: /bin/true
+        run: /usr/bin/true
 
       - name: Test playbook syntax
-        run: /bin/true
+        run: /usr/bin/true
 
       - name: Test playbook
-        run: /bin/true
+        run: /usr/bin/true
         env:
           ANSIBLE_FORCE_COLOR: '1'
