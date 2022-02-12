@@ -10,6 +10,27 @@ on:
     - cron: "30 4 * * 0"
 
 jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v2
+        with:
+          - python-version: '3.x'
+
+      - name: Install linting dependencies
+        run: pip3 install yamllint ansible ansible-lint
+
+      - name: lint code
+        run: |
+          yamllint .
+          ansible-lint
+
   integration:
     name: Integration
     runs-on: ${{ matrix.os }}
