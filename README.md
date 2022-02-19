@@ -27,7 +27,22 @@ $ ansible-playbook main.yml
 
 ## Manual configuration steps
 
-No items documented yet.
+### Computer name
+
+```bash
+$ for item in ComputerName LocalHostName; do
+  sudo scutil --set ${item} ${host}
+done
+$ dnscacheutil -flushcache
+```
+
+### SSH remote logins
+
+```bash
+# Ensure Terminal has Full Disk Access privileges
+# (from System Preferences / Security & Privacy)
+$ sudo systemsetup -setremotelogin on
+```
 
 
 ## Testing the playbook
@@ -40,4 +55,4 @@ This project is [continuously tested on GitHub's Actions' macOS infrastructure](
 This project was created by Rogier Krieger, inspired by Jeff Geerling's [mac-dev-playbook](https://github.com/geerlingguy/mac-dev-playbook).
 
 [badge-CI]: https://github.com/rkrieger/bootstrap-macos/actions/workflows/ci.yml/badge.svg?event=push
-[link-CI]:  (https://github.com/rkrieger/bootstrap-macos/actions/workflows/ci.yml
+[link-CI]: https://github.com/rkrieger/bootstrap-macos/actions/workflows/ci.yml
