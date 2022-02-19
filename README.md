@@ -1,4 +1,4 @@
-# macOS Bootstrap Ansible Playbook
+# Bootstrap macOS with Ansible
 
 [![CI][badge-CI]][link-CI]
 
