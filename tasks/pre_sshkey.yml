@@ -1,0 +1,13 @@
+---
+- name: Check presence of SSH keypair
+  stat:
+    path: "~/.ssh/{{ sshkey_privkey }}"
+  register: _sshkey_file
+
+- name: Get a password for the SSH keypair
+  pause:
+    prompt: "Enter a password for the SSH private key"
+  register: _sshkey_prompt
+  when:
+    - not _sshkey_file.stat.exists
+    - sshkey_passphrase is undefined

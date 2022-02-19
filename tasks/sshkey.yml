@@ -1,0 +1,17 @@
+---
+- name: "SSH keypair exists for {{ sshkey_user }}"
+  user:
+    name: "{{ sshkey_user }}"
+    generate_ssh_key: true
+    ssh_key_type: "{{ sshkey_type }}"
+    ssh_key_file: "~/.ssh/{{ sshkey_privkey }}"
+    ssh_key_passphrase: "{{ _passphrase | select('defined') | first }}"
+    ssh_key_comment: "{{ sshkey_comment }}"
+  vars:
+    _passphrase:
+      - "{{ _sshkey_prompt.user_input is defined | ternary(_sshkey_prompt.user_input, undef) }}"
+      - "{{ sshkey_passphrase is defined | ternary(sshkey_passphrase, undef) }}"
+      - "{{ sshkey_defpassphrase }}"
+  when:
+    - configure_sshkey
+    - not _sshkey_file.stat.exists
