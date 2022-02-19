@@ -3,3 +3,5 @@
 roles*
 brew_install.sh
 config.yml
+!tests/config.yml
+

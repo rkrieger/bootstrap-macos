@@ -62,6 +62,7 @@ jobs:
         run: |
           cp tests/ansible.cfg ./
           cp tests/inventory ./
+          cp tests/config.yml ./
           ansible-galaxy install -r requirements.yml
 
       - name: Test playbook syntax

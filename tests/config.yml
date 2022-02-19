@@ -1,0 +1,19 @@
+---
+configure_sshkey: true
+
+
+homebrew_installed_packages:
+  - mg
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  - homebrew/cask-versions
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - keepassxc
+
+
+mas_installed_apps:
+  - { id: 1451685025, name: "Wireguard" }
