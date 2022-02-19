@@ -22,7 +22,7 @@ $ ansible-galaxy install -r requirements.yml
 $ ansible-playbook main.yml
 ```
 
-> Note: If some Homebrew commands fail, you may need to agree to the Xcode licence or fix other Brew issues. Run `brew doctor ` for diagnosis and a fix.
+> Note: If some Homebrew commands fail, you may need to agree to the Xcode licence or fix other Brew issues. Run `brew doctor` for diagnosis and a fix.
 
 
 ## Manual configuration steps
