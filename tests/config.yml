@@ -15,5 +15,4 @@ homebrew_cask_apps:
   - keepassxc
 
 
-mas_installed_apps:
-  - { id: 1451685025, name: "Wireguard" }
+mas_installed_apps: []
