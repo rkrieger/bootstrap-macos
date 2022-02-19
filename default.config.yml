@@ -1,0 +1,9 @@
+---
+configure_sshkey: true
+
+sshkey_type: ed25519
+sshkey_privkey: "id_{{ sshkey_type }}"
+sshkey_pubkey: "{{ sshkey_privkey }}.pub"
+sshkey_defpassphrase: ''
+sshkey_user: "{{ [ ansible_user, username, lookup('env','USER'), ansible_facts['ansible_user_id'] ] | select('defined') | first }}"
+sshkey_comment: "{{ sshkey_user }}@{{ ansible_hostname | lower }}"
