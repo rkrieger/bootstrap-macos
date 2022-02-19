@@ -1,6 +1,61 @@
 ---
 configure_sshkey: true
 
+homebrew_installed_packages:
+  - ansible-lint
+  - asciinema
+  - bgpq4
+  - gnupg
+  - hcloud
+  - hugo
+  - ipmitool
+  - kubernetes-cli
+  - libyubikey
+  - mg
+  - pinentry
+  - pinentry-mac
+  - python@3.10
+  - ssh-copy-id
+  - wget
+  - yamllint
+  - zeromq
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - firefox-esr
+  - google-drive
+  - google-chrome
+  - handbrake
+  - keepassxc
+  - keybase
+  - licecap
+  - orange
+  - pgadmin4
+  - powershell
+  - remarkable
+  - signal
+  - spotify
+  - stack
+
+
+mas_installed_apps:
+  - { id: 497799835,  name: "Xcode" }
+  - { id: 1295203466, name: "Microsoft Remote Desktop" }
+  - { id: 1451685025, name: "Wireguard" }
+  - { id: 413857545,  name: "Divvy" }
+  - { id: 462058435,  name: "Microsoft Excel" }
+  - { id: 462062816,  name: "Microsoft PowerPoint" }
+  - { id: 784801555,  name: "Microsoft OneNote" }
+  - { id: 462054704,  name: "Microsoft Word" }
+  - { id: 409203825,  name: "Numbers" }
+  - { id: 409183694,  name: "Keynote" }
+  - { id: 409201541,  name: "Pages" }
+  - { id: 406825478,  name: "Telephone" }
+
 sshkey_type: ed25519
 sshkey_privkey: "id_{{ sshkey_type }}"
 sshkey_pubkey: "{{ sshkey_privkey }}.pub"

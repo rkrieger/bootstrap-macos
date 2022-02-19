@@ -17,6 +17,14 @@
       tags: ['sshkey']
 
 
+  roles:
+    - role: geerlingguy.mac.homebrew
+      tags: ['homebrew']
+    - role: geerlingguy.mac.mas
+      when: mas_installed_apps or mas_installed_app_ids
+      tags: ['mas']
+
+
   tasks:
     - import_tasks: tasks/sshkey.yml
       when: configure_sshkey
