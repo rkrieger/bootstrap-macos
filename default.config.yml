@@ -1,6 +1,7 @@
 ---
 configure_sshkey: true
 
+
 homebrew_installed_packages:
   - ansible-lint
   - asciinema
@@ -40,6 +41,7 @@ homebrew_cask_apps:
   - signal
   - spotify
   - stack
+  - visual-studio-code
 
 
 mas_installed_apps:
@@ -55,6 +57,7 @@ mas_installed_apps:
   - { id: 409183694,  name: "Keynote" }
   - { id: 409201541,  name: "Pages" }
   - { id: 406825478,  name: "Telephone" }
+
 
 sshkey_type: ed25519
 sshkey_privkey: "id_{{ sshkey_type }}"
