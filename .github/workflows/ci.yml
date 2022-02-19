@@ -68,6 +68,6 @@ jobs:
         run: ansible-playbook main.yml --syntax-check
 
       - name: Test playbook
-        run: ansible-playbook main.yml
+        run: ansible-playbook main.yml --extra-vars "sshkey_passphrase=TEST"
         env:
           ANSIBLE_FORCE_COLOR: '1'
