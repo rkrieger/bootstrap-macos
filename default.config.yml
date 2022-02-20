@@ -45,6 +45,7 @@ homebrew_cask_apps:
   - spotify
   - stack
   - visual-studio-code
+  - vlc
 
 
 mas_installed_apps:
