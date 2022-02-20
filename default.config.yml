@@ -46,7 +46,6 @@ homebrew_cask_apps:
 
 
 mas_installed_apps:
-  - { id: 497799835,  name: "Xcode" }
   - { id: 1295203466, name: "Microsoft Remote Desktop" }
   - { id: 1451685025, name: "Wireguard" }
   - { id: 413857545,  name: "Divvy" }
@@ -58,7 +57,7 @@ mas_installed_apps:
   - { id: 409183694,  name: "Keynote" }
   - { id: 409201541,  name: "Pages" }
   - { id: 406825478,  name: "Telephone" }
-
+  - { id: 497799835,  name: "Xcode" }
 
 sshkey_type: ed25519
 sshkey_privkey: "id_{{ sshkey_type }}"
