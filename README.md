@@ -8,14 +8,17 @@ This Ansible playbook installs and configures most of the software that I use on
 ## Installation steps
 
 The installation steps are straightforward:
-  1. Clone or download this repository
-  2. On a fresh system, run the `bootstrap.sh` shell script
-  3. Ensure the Ansible environment is up to date
-  4. Run the Ansible playbook
-  5. Finish with manual configuration
+  1. Ensure that Apple's command line tools are installed
+
+  2. Clone or download this repository
+  3. On a fresh system, run the `bootstrap.sh` shell script
+  4. Ensure the Ansible environment is up to date
+  5. Run the Ansible playbook
+  6. Finish with manual configuration
 
 The following is a shell script equivalent:
 ```bash
+$ xcode-select --install
 $ git clone https://github.com/rkrieger/bootstrap-macos.git
 $ ./bootstrap.sh
 $ ansible-galaxy install -r requirements.yml
@@ -44,6 +47,12 @@ $ dnscacheutil -flushcache
 $ sudo systemsetup -setremotelogin on
 ```
 
+### SSH agent (Keychain)
+
+```bash
+$ ssh-add --apple-use-keychain ~/.ssh/id_ed25519  # Monterey and later
+$ ssh-add -K ~/.ssh/id_ed25519 # earlier versions
+```
 
 ## Testing the playbook
 
