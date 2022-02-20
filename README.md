@@ -9,7 +9,6 @@ This Ansible playbook installs and configures most of the software that I use on
 
 The installation steps are straightforward:
   1. Ensure that Apple's command line tools are installed
-
   2. Clone or download this repository
   3. On a fresh system, run the `bootstrap.sh` shell script
   4. Ensure the Ansible environment is up to date
