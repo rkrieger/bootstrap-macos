@@ -1,7 +1,4 @@
 ---
-configure_sshkey: true
-
-
 homebrew_installed_packages:
   - ansible
   - ansible-lint
@@ -63,6 +60,7 @@ mas_installed_apps:
   - { id: 497799835,  name: "Xcode" }
 
 
+configure_sshkey: true
 sshkey_type: ed25519
 sshkey_privkey: "id_{{ sshkey_type }}"
 sshkey_pubkey: "{{ sshkey_privkey }}.pub"
