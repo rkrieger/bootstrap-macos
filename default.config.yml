@@ -3,6 +3,7 @@ configure_sshkey: true
 
 
 homebrew_installed_packages:
+  - ansible
   - ansible-lint
   - asciinema
   - bgpq4
