@@ -8,6 +8,17 @@ dockitems_remove: []
 dockitems_persist: []
 
 
+configure_dotfiles: true
+dotfiles_repo: 'https://github.com/rkrieger/dotfiles.git'
+dotfiles_repo_version: main
+dotfiles_repo_accept_hostkey: false
+dotfiles_repo_local_destination: "~/Documents/dotfiles"
+dotfiles_home: "~"
+dotfiles_files:
+  - .aliases
+  - .zshrc
+
+
 homebrew_installed_packages:
   - ansible
   - ansible-lint
