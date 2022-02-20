@@ -13,5 +13,4 @@
       - "{{ sshkey_passphrase is defined | ternary(sshkey_passphrase, undef) }}"
       - "{{ sshkey_defpassphrase }}"
   when:
-    - configure_sshkey
     - not _sshkey_file.stat.exists
