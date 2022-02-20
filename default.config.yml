@@ -52,6 +52,7 @@ homebrew_cask_apps:
   - stack
   - visual-studio-code
   - vlc
+  - whatsapp
 
 
 mas_installed_apps:
