@@ -61,6 +61,7 @@ mas_installed_apps:
   - { id: 406825478,  name: "Telephone" }
   - { id: 497799835,  name: "Xcode" }
 
+
 sshkey_type: ed25519
 sshkey_privkey: "id_{{ sshkey_type }}"
 sshkey_pubkey: "{{ sshkey_privkey }}.pub"
