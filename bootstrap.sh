@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Environment properties
+_arch=`uname -m`
+_shell=`basename $SHELL`
+
 # Xcode CLI utilities
 xcode-select --install
 
@@ -9,8 +13,6 @@ chmod +x ./brew_install.sh
 /bin/bash -c ./brew_install.sh
 
 # Ensure Homebrew is in ${PATH}
-_arch=`uname -m`
-_shell=`basename $SHELL`
 if [ X"${_shell}" == X"zsh" ]; then
     _profile=~/.zprofile
 elif [ X"${_shell}" == X"bash" ]; then
