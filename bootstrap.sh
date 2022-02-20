@@ -7,6 +7,11 @@ _shell=`basename $SHELL`
 # Xcode CLI utilities
 xcode-select --install
 
+# Rosetta for Apple silicon
+if [ X"${_arch}" == X"arm64" ]; then
+	sudo softwareupdate --install-rosetta
+fi
+
 # Homebrew
 curl -fsSL -o brew_install.sh https://raw.githubusercontent.com/Homebrew/install/master/install.sh
 chmod +x ./brew_install.sh
