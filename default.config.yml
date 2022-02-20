@@ -1,4 +1,13 @@
 ---
+configure_dock: true
+dockitems_remove: []
+#  - 'App Store'
+#  - Podcasts
+#  - Siri
+#  - TV
+dockitems_persist: []
+
+
 homebrew_installed_packages:
   - ansible
   - ansible-lint
