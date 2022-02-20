@@ -21,7 +21,8 @@ $ xcode-select --install
 $ git clone https://github.com/rkrieger/bootstrap-macos.git
 $ ./bootstrap.sh
 $ ansible-galaxy install -r requirements.yml
-$ ansible-playbook main.yml
+$ ansible-playbook main.yml --ask-become-pass --extra-vars 'sshkey_passphrase=ChangeMe'
+BECOME password: # Login password for an admin account
 ```
 
 > Note: If some Homebrew commands fail, you may need to agree to the Xcode licence or fix other Brew issues. Run `brew doctor` for diagnosis and a fix.
