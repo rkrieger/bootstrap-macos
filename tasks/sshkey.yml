@@ -1,6 +1,6 @@
 ---
 - name: "SSH keypair exists for {{ sshkey_user }}"
-  user:
+  ansible.builtin.user:
     name: "{{ sshkey_user }}"
     generate_ssh_key: true
     ssh_key_type: "{{ sshkey_type }}"

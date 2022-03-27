@@ -1,11 +1,11 @@
 ---
 - name: Check presence of SSH keypair
-  stat:
+  ansible.builtin.stat:
     path: "~/.ssh/{{ sshkey_privkey }}"
   register: _sshkey_file
 
 - name: Get a password for the SSH keypair
-  pause:
+  ansible.builtin.pause:
     prompt: "Enter a password for the SSH private key"
   register: _sshkey_prompt
   when:
