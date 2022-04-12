@@ -34,7 +34,6 @@ homebrew_installed_packages:
   - pinentry
   - pinentry-mac
   - python@3.10
-  - ssh-copy-id
   - tmux
   - wget
   - yamllint
