@@ -45,10 +45,6 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v2
 
-      - name: Uninstall GitHub's built-in python
-        run: |
-          brew uninstall python
-
       - name: Uninstall GitHub Action's built-in Homebrew
         run: tests/uninstall-homebrew.sh
 
