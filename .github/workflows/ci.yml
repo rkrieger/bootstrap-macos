@@ -18,6 +18,11 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v2
 
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
       - name: Install linting dependencies
         run: pip3 install yamllint ansible ansible-lint
 
@@ -38,6 +43,10 @@ jobs:
     steps:
       - name: Check out the code
         uses: actions/checkout@v2
+
+      - name: Uninstall GitHub's built-in python
+        run: |
+          brew uninstall python
 
       - name: Uninstall GitHub Action's built-in Homebrew
         run: tests/uninstall-homebrew.sh
