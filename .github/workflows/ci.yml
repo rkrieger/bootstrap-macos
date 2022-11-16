@@ -45,10 +45,9 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v2
 
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+      - name: Unlink Github Action's built-in Python
+        run: |
+          brew unlink python
 
       - name: Uninstall GitHub Action's built-in Homebrew
         run: tests/uninstall-homebrew.sh
