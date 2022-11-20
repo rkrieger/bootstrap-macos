@@ -45,6 +45,10 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v3
 
+      - name: Find Github built-in Python links
+        run: |
+          brew unlink --dry-run python > /tmp/python-links.txt
+
       - name: Uninstall GitHub Action's built-in Homebrew
         run: tests/uninstall-homebrew.sh
 
@@ -55,7 +59,6 @@ jobs:
 
       - name: Unlink Github Action's built-in Python
         run: |
-          brew unlink --dry-run python > /tmp/python-links.txt
           cat /tmp/python-links.txt | xargs -J % -n1 sudo rm -f %
 
       - name: Run bootstrap shell script
