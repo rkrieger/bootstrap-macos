@@ -49,10 +49,17 @@ jobs:
         run: |
           brew unlink --dry-run python > /tmp/python-links.txt
 
-      - name: Uninstall GitHub Action's built-in Homebrew
+      - name: Remove Github runner's built-in Python
+        run: |
+          sudo rm -rf /Library/Frameworks/Python.framework
+          sudo rm -rf "/Applications/Python 2.7"
+          cd /usr/local/bin/
+          ls -l /usr/local/bin | grep '../Library/Frameworks/Python.framework' | awk '{print $9}' | tr -d @ | xargs rm -f
+
+      - name: Uninstall GitHub runner's built-in Homebrew
         run: tests/uninstall-homebrew.sh
 
-      - name: Uninstall GitHub Action's built-in browser installs
+      - name: Uninstall GitHub runner's built-in browser installs
         run: |
           sudo rm -rf /Applications/Firefox.app
           sudo rm -rf /Applications/Google\ Chrome.app
