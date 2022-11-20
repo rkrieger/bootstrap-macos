@@ -45,10 +45,6 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v2
 
-      - name: Unlink Github Action's built-in Python
-        run: |
-          brew unlink python
-
       - name: Uninstall GitHub Action's built-in Homebrew
         run: tests/uninstall-homebrew.sh
 
@@ -56,6 +52,11 @@ jobs:
         run: |
           sudo rm -rf /Applications/Firefox.app
           sudo rm -rf /Applications/Google\ Chrome.app
+
+      - name: Unlink Github Action's built-in Python
+        run: |
+          brew unlink --dry-run python > /tmp/python-links.txt
+          cat /tmp/python-links.txt | xargs -J % -n1 sudo rm -f %
 
       - name: Run bootstrap shell script
         run: |
