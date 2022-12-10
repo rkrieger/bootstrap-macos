@@ -25,6 +25,7 @@ homebrew_installed_packages:
   - asciinema
   - bgpq4
   - gnupg
+  - grepcidr
   - hcloud
   - hugo
   - ipmitool
