@@ -26,6 +26,9 @@ jobs:
       - name: Install linting dependencies
         run: pip3 install yamllint ansible ansible-lint
 
+      - name: Install Galaxy dependencies
+        run: ansible-galaxy install -r requirements.yml
+
       - name: lint code
         run: |
           yamllint .
