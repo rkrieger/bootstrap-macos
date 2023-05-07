@@ -62,6 +62,7 @@ homebrew_cask_apps:
   - pgadmin4
   - powershell
   - remarkable
+  - scroll-reverser
   - signal
   - spotify
   - stack
