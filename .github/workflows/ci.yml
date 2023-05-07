@@ -43,7 +43,6 @@ jobs:
         os:
           - macos-12
           - macos-11
-          - macos-10.15
     steps:
       - name: Check out the code
         uses: actions/checkout@v3
