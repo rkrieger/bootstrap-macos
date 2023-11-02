@@ -39,6 +39,7 @@ homebrew_installed_packages:
   - python@3.10
   - virtualenv
   - tmux
+  - vultr
   - wget
   - yamllint
   - zeromq
