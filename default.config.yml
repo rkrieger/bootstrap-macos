@@ -42,6 +42,7 @@ homebrew_installed_packages:
   - vultr
   - wget
   - yamllint
+  - youtube-dl
   - zeromq
 
 homebrew_taps:
