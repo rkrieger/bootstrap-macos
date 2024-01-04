@@ -37,6 +37,7 @@ homebrew_installed_packages:
   - pinentry
   - pinentry-mac
   - pngpaste
+  - podman
   - python@3.12
   - virtualenv
   - tmux
