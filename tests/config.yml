@@ -6,8 +6,6 @@ homebrew_installed_packages:
   - mg
 
 homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
   - homebrew/cask-versions
 
 homebrew_cask_appdir: /Applications
