@@ -33,6 +33,7 @@ homebrew_installed_packages:
   - kubernetes-cli
   - libyubikey
   - mg
+  - mtr
   - node@20
   - pinentry
   - pinentry-mac
