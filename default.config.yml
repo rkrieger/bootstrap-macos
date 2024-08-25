@@ -48,8 +48,7 @@ homebrew_installed_packages:
   - youtube-dl
   - zeromq
 
-homebrew_taps:
-  - homebrew/cask-versions
+homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
