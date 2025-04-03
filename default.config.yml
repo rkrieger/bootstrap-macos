@@ -54,7 +54,7 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - docker
   - drawio
-  - firefox-esr
+  - firefox@esr
   - google-drive
   - google-chrome
   - handbrake
