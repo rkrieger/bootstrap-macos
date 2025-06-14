@@ -36,6 +36,13 @@ _eval2=')"'
 echo "${_eval1}${_brew}${_eval2}" >> ${_profile}
 eval "${_eval1}${_brew}${_eval2}"
 
+# Confirm that required taps are available
+echo "Homebrew taps available:"
+brew tap
+
+for tap in homebrew/{core,cask}; do
+    brew tap | grep -q -e "$tap" || (echo Tap "$tap" not found; exit 1)
+done
 
 # Ansible
 brew install ansible
