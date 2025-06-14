@@ -5,7 +5,8 @@ configure_sshkey: true
 homebrew_installed_packages:
   - mg
 
-homebrew_taps: []
+homebrew_taps:
+  - homebrew/cask
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
