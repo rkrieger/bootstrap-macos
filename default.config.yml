@@ -47,8 +47,7 @@ homebrew_installed_packages:
   - yamllint
   - zeromq
 
-homebrew_taps:
-  - homebrew/cask
+homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
