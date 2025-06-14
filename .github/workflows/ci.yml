@@ -43,8 +43,6 @@ jobs:
       matrix:
         os:
           - macos-13
-          - macos-14
-          - macos-15
     steps:
       - name: Check out the code
         uses: actions/checkout@v3
