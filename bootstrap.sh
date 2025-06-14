@@ -38,6 +38,7 @@ eval "${_eval1}${_brew}${_eval2}"
 
 # Confirm that required taps are available
 echo "Homebrew taps available:"
+printenv
 brew tap
 
 for tap in homebrew/{core,cask}; do
