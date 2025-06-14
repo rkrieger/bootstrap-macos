@@ -48,3 +48,5 @@ done
 
 # Ansible
 brew install ansible
+
+brew tap --verbose
