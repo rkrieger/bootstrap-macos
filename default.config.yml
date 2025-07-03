@@ -63,7 +63,6 @@ homebrew_cask_apps:
   - orange
   - pgadmin4
   - powershell
-  - remarkable
   - scroll-reverser
   - signal
   - spotify
@@ -80,16 +79,17 @@ homebrew_cask_apps:
 mas_installed_apps:
   - { id: 1295203466, name: "Microsoft Remote Desktop" }
   - { id: 1451685025, name: "Wireguard" }
-  - { id: 413857545,  name: "Divvy" }
-  - { id: 462058435,  name: "Microsoft Excel" }
-  - { id: 462062816,  name: "Microsoft PowerPoint" }
-  - { id: 784801555,  name: "Microsoft OneNote" }
-  - { id: 462054704,  name: "Microsoft Word" }
-  - { id: 409203825,  name: "Numbers" }
-  - { id: 409183694,  name: "Keynote" }
-  - { id: 409201541,  name: "Pages" }
-  - { id: 406825478,  name: "Telephone" }
-  - { id: 497799835,  name: "Xcode" }
+  - { id:  413857545, name: "Divvy" }
+  - { id:  462058435, name: "Microsoft Excel" }
+  - { id:  462062816, name: "Microsoft PowerPoint" }
+  - { id:  784801555, name: "Microsoft OneNote" }
+  - { id:  462054704, name: "Microsoft Word" }
+  - { id:  409203825, name: "Numbers" }
+  - { id:  409183694, name: "Keynote" }
+  - { id:  409201541, name: "Pages" }
+  - { id: 1276493162, name: "reMarkable desktop" }
+  - { id:  406825478, name: "Telephone" }
+  - { id:  497799835, name: "Xcode" }
 
 
 configure_sshkey: true
