@@ -39,6 +39,7 @@ homebrew_installed_packages:
   - pinentry-mac
   - pngpaste
   - podman
+  - powershell
   - python@3.12
   - virtualenv
   - tmux
@@ -62,7 +63,6 @@ homebrew_cask_apps:
   - licecap
   - orange
   - pgadmin4
-  - powershell
   - scroll-reverser
   - signal
   - spotify
