@@ -1,0 +1,10 @@
+---
+- name: TouchID enabled for sudo
+  ansible.builtin.template:
+    src: sudo_local.j2
+    dest: /etc/pam.d/sudo_local
+    owner: root
+    group: wheel
+    mode: '0444'
+    backup: true
+...

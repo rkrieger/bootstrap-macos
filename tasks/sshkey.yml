@@ -9,8 +9,10 @@
     ssh_key_comment: "{{ sshkey_comment }}"
   vars:
     _passphrase:
-      - "{{ _sshkey_prompt.user_input is defined | ternary(_sshkey_prompt.user_input, undef) }}"
-      - "{{ sshkey_passphrase is defined | ternary(sshkey_passphrase, undef) }}"
+      # - "{{ _sshkey_prompt.user_input is defined | ansible.builtin.ternary(_sshkey_prompt.user_input, undef, omit) }}"
+      - "{{ ansible.builtin.ternary(_sshkey_prompt.user_input, undef, omit) }}"
+      - "{{ ansible.builtin.ternary(sshkey_passphrase, undef, omit) }}"
       - "{{ sshkey_defpassphrase }}"
   when:
     - not _sshkey_file.stat.exists
+...
